@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&display=swap');
+
+body {
+	background: #2a2a2e;
+	font-family: "Roboto Mono";
+}
+
+#gutterY { 
+	display: flex;
+	flex-direction: column;
+	float: left;
+}
+
+#gutterX { 
+	display: flex;
+	flex-direction: row;
+}
+
+#gutterY div{
+	padding: 8px;
+	
+	width: 5px;
+	margin: 1px;
+	border: 1px #2a2a2a solid;
+	color: black;
+	text-align: center;
+	font-size: 12px;
+}
+
+#nothing {
+	height: 14px !important;
+	padding: 1px !important;
+}
+
+#gutterX div{
+	padding: 1px;
+	height: 14px;
+	width: 30px;
+	margin: 1px;
+	border: 1px #2a2a2a solid;
+	color: black;
+	text-align: center;
+	font-size: 12px;
+}
+
+#divby0 {
+	position: absolute;
+	transform: rotate(0deg);
+	height: 200px;
+	top: 50px;
+	left: -200px;
+	animation-name: divbyZ;
+	animation-duration: 2s;
+}
+
+@keyframes divbyZ {
+	from {
+		transform: rotate(30deg);
+		display: block !important;;
+		left: -200px;
+	}
+	50% {
+		transform: rotate(60deg);
+		display: block !important;
+		left: -90px;: 
+	}
+	to {
+		transform: rotate(30deg);
+		display: block !important;
+		left: -200px;
+	}
+}
+
+td {
+	height: 30px;
+	width: 30px;
+	background: #202020;
+	border: 1px #2a2a2a solid;
+	color: white;
+	text-align: center;
+	font-size: 12px;
+}
+
+td.active {
+	border: 1px #202020 solid;
+	background: white;
+	color: black;
+}
+
+td.active::after {
+	content: " ";
+}
+
+td.active.cursor::after {
+	content: " ";
+	text-decoration: underline;
+}
+
+td.access {
+	background: black;
+}
+
+#console {
+	position: absolute;
+	height: 100px;
+	width: calc(100% - 10px);
+	bottom: 0;
+	right: 0;
+	left: 0;
+	border: 5px #202020 solid;
+}
